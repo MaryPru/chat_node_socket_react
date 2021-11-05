@@ -1,0 +1,39 @@
+.list{
+    background: #e3f6fc;
+    border-radius: 10px;
+    height: 75vh;
+    overflow: scroll;
+}
+
+.user_ava{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid blue;
+    margin-right: 5px;
+}
+
+.user_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.user_ava_isActive{
+    position: absolute;
+    top: 8px;
+    left: 51px;
+    background: green;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.user_wrapper_ava{
+    position: relative;
+}
+
+.user_wrapper_name{
+    font-weight: bold;
+}

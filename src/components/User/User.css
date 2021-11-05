@@ -1,0 +1,92 @@
+.user{
+    background: #e3f6fc;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.user_avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid yellow;
+}
+
+.user_dots{
+    width: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.user_info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.user_name{
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.user_status_text{
+    background: #6588de;
+    border-radius: 10px;
+    width: 70px;
+    text-align: end;
+    padding: 2px 10px;
+}
+
+.user_status{
+    position: relative;
+}
+
+.user_status_isActive{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    background: green;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.user_isActive{
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    background: green;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.user_avatar_wrapper{
+    position: relative;
+}
+
+.blink {
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    animation-duration: 2s;
+    -webkit-animation-name: blinker;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    -webkit-animation-duration: 2s;
+}
+
+@keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+
+@-webkit-keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}

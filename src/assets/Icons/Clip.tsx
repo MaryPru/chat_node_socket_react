@@ -4,11 +4,11 @@ const Clip = () => {
     return (
         <div>
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                 width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                 width="25" height="25" viewBox="0 0 512.000000 512.000000"
                  preserveAspectRatio="xMidYMid meet">
 
                 <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                   fill="#e3f6fc" stroke="none">
+                   fill="#6588de" stroke="none">
                     <path d="M3440 5105 c-214 -37 -363 -100 -528 -225 -91 -69 -2437 -2416 -2504
 -2505 -348 -462 -399 -1073 -133 -1583 276 -528 844 -839 1433 -784 293 28
 515 112 762 290 96 69 2491 2469 2522 2527 37 70 24 166 -31 229 -46 52 -158

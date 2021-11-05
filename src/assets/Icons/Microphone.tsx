@@ -4,11 +4,11 @@ const Microphone = () => {
     return (
         <div>
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                 width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                 width="30" height="30" viewBox="0 0 512.000000 512.000000"
                  preserveAspectRatio="xMidYMid meet">
 
                 <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                   fill="#e3f6fc" stroke="none">
+                   fill="#6588de" stroke="none">
                     <path d="M2332 4520 c-168 -45 -334 -174 -401 -310 -60 -125 -61 -128 -61
 -970 0 -843 1 -845 62 -970 46 -95 159 -204 265 -257 115 -58 207 -77 346 -71
 275 12 491 160 578 398 l24 65 0 835 0 835 -24 65 c-64 175 -197 301 -386 366

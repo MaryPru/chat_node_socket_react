@@ -1,112 +1,45 @@
 .header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.user{
-    background:#e3f6fc;
+    background: #e3f6fc;
     border-radius: 10px;
-    width: 20%;
-    height: 140px;
+    padding: 10px;
+    height: 125px;
     position: relative;
 }
 
-.title{
-    width: 79%;
+.title_image{
+    width: 450px;
     height: 140px;
-    border-radius: 10px;
-    background:#e3f6fc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-.title_text{
-    font-size: 25px;
-    border-radius:10px;
-    width: 300px;
-    padding: 5px;
-    background: #6588de;
+
+.title_text {
+    position: absolute;
+    top: 28px;
+    left: 626px;
+    font-size: 70px;
+    font-weight: normal;
+    cursor: pointer;
+    text-shadow: -8px -8px 0 hsl(200,100%,35%),
+    -7px -7px 0 hsl(200,100%,55%),
+    -6px -6px 0 hsl(200,100%,60%),
+    -5px -5px 0 hsl(200,100%,65%),
+    -4px -4px 0 hsl(200,100%,70%),
+    -3px -3px 0 hsl(200,100%,75%),
+    -2px -2px 0 hsl(200,100%,80%),
+    -1px -1px 0 hsl(200,100%,85%),
+    0 0 0 hsl(200,100%,95%);
+    color: transparent;
+    transition: all 1s;
     text-align: center;
 }
-
-.user_avatar{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 1px solid yellow;
-    margin: 5px 0;
-}
-
-.user_info{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.user_status{
-    border-radius: 15px;
-    background: #6588de;
-    width: 90px;
-    text-align: center;
-    margin: 5px 0;
-}
-
-.user_isActive{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: green;
-    position: absolute;
-    top: 10px;
-    left: 189px;
-}
-
-.user_status{
-    position: relative;
-}
-
-.user_status_isActive{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: green;
-    position: absolute;
-    top: 6px;
-    left: 6px;
-}
-
-.user_name{
-    font-weight: bold;
-}
-
-.user_button {
-    position: absolute;
-    top: 18px;
-    left: 306px;
-}
-.user_dots{
-    width: 20px;
-}
-
-.blink {
-    animation-name: blinker;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
-    animation-duration: 3s;
-    -webkit-animation-name: blinker;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
-    -webkit-animation-duration: 3s;
-}
-
-@keyframes blinker {
-    from { opacity: 1.0; }
-    to { opacity: 0.0; }
-}
-
-@-webkit-keyframes blinker {
-    from { opacity: 1.0; }
-    to { opacity: 0.0; }
+.title_text:hover {
+    text-shadow: -8px 8px 0 hsl(80,100%,35%),
+    -7px 7px 0 hsl(80,100%,55%),
+    -6px 6px 0 hsl(80,100%,60%),
+    -5px 5px 0 hsl(80,100%,65%),
+    -4px 4px 0 hsl(80,100%,70%),
+    -3px 3px 0 hsl(80,100%,75%),
+    -2px 2px 0 hsl(80,100%,80%),
+    -1px 1px 0 hsl(80,100%,85%),
+    0 0 0 hsl(80,100%,95%);
+    color: transparent;
 }
