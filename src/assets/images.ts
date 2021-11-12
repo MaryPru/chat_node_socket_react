@@ -4,6 +4,8 @@ import avatar2 from "./img/ava2.png"
 import head from './img/head.png'
 import send from './img/send.png'
 import login from './img/login.png'
+import smile from './img/smile.png'
+import  x from  './img/x.png'
 
 export const images = {
     avatar,
@@ -11,6 +13,7 @@ export const images = {
     avatar2,
     head,
     send,
-    login
-
+    login,
+    smile,
+    x
 }

@@ -5,26 +5,27 @@ export interface ActionInterface {
 
 export interface RoomReducer {
     joined: boolean,
-    roomId:string
-    userName:string
-    users:OneUser[]
-    messages:OneMessage[]
-    userId:string
-}
-
-export interface Room{
-    roomId:string
-    userName:string
-}
-
-export interface OneUser{
-    userName:string
-    userId:string
-}
-
-export interface OneMessage{
-    text:string
+    roomId: string
     userName: string
-    userId:string
+    users: OneUser[]
+    messages: OneMessage[]
+    userId: string
+}
+
+export interface Room {
+    roomId: string
+    userName: string
+}
+
+export interface OneUser {
+    userName: string
+    userId: string
+}
+
+export interface OneMessage {
+    text: string
+    userName: string
+    userId: string
+    time: string
 }
 

@@ -3,13 +3,14 @@ import User from "./User/User";
 import Header from "./Header/Header";
 import List from "./List/List";
 import ChatScreen from "./ChatScreen/ChatScreen";
-import {OneMessage, RoomReducer} from "../reducers/types";
+import {RoomReducer} from "../reducers/types";
 
-interface ChatInterface{
-    state:RoomReducer
+interface ChatInterface {
+    state: RoomReducer
 }
-const Chat = (props:ChatInterface) => {
-    const {state}=props
+
+const Chat = (props: ChatInterface) => {
+    const {state} = props
 
     return (
         <div className="app_wrapper">
@@ -19,12 +20,11 @@ const Chat = (props:ChatInterface) => {
             <div className="app_header">
                 <Header/>`
             </div>
-
-            <div className="app_list" >
-                <List  state={state} />
+            <div className="app_list">
+                <List state={state}/>
             </div>
-            <div className="app_chat" >
-                <ChatScreen state={state}  />
+            <div className="app_chat">
+                <ChatScreen state={state}/>
             </div>
         </div>
     );

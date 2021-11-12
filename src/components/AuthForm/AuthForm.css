@@ -1,4 +1,4 @@
-.auth_wrapper{
+.auth_wrapper {
     position: fixed;
     top: 0;
     right: 0;
@@ -9,7 +9,7 @@
     justify-content: center;
 }
 
-.auth{
+.auth {
     width: 400px;
     height: 450px;
     background: #e3f6fc;
@@ -21,7 +21,7 @@
     flex-direction: column;
 }
 
-.auth_login{
+.auth_login {
     width: 100px;
     position: absolute;
     top: -75px;
@@ -33,11 +33,11 @@
     margin: 10px;
 }
 
-.auth_header{
- margin-bottom: 60px;
-
+.auth_header {
+    margin-bottom: 60px;
 }
-.auth_form{
+
+.auth_form {
     height: 60%;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@
     position: relative;
 }
 
-.auth_input{
+.auth_input {
     padding: 15px;
     width: 85%;
     border: none;
@@ -56,7 +56,7 @@
     margin: 20px 0;
 }
 
-.auth_button{
+.auth_button {
     border: none;
     background: transparent;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);

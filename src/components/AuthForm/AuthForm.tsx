@@ -1,19 +1,18 @@
 import React, {useState} from 'react';
 import "./AuthForm.css"
 import {images} from "../../assets/images";
-import socket from "../../socket";
 import io from "socket.io-client";
 import axios from "axios";
-import {Room, RoomReducer} from "../../reducers/types";
+import {Room} from "../../reducers/types";
 
 interface AuthProps {
-    onLogin: (obj:Room) => void
-
+    onLogin: (obj: Room) => void
 }
 
 const connectSocket = () => {
     io('http://localhost:8888')
 }
+
 const AuthForm = (props: AuthProps) => {
     const {onLogin} = props
     const [roomId, setRoomId] = useState('')
@@ -40,13 +39,18 @@ const AuthForm = (props: AuthProps) => {
             });
         onLogin(obj);
         setIsLoading(false);
-
     }
+
     return (
         <div className={"auth_wrapper"}>
             <div className="auth">
                 <div className="auth_header">
-                    <img className={'auth_header_img'} src={images.head} alt="head" onClick={connectSocket}/>
+                    <img
+                        className={'auth_header_img'}
+                        src={images.head}
+                        alt="head"
+                        onClick={connectSocket}
+                    />
                 </div>
                 <div className="auth_form">
                     <img className={'auth_login'} src={images.login}/>

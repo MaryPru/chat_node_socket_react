@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors')
 
-
 const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
@@ -16,17 +15,16 @@ app.use(express.urlencoded({extended: true})) //парсинг ссылки
 
 const rooms = new Map();
 
-app.get('/rooms/:id', (req,res)=>{
-    const {id: roomId} = req.params
-    console.log()
-    const obj = rooms.has(roomId)
-        ? {
-            users: [...rooms.get(roomId).get('users').values()],
-            messages: [...rooms.get(roomId).get('messages').values()]
-        }
-        : {users: [], messages: []};
-    res.json(obj);
-}
+app.get('/rooms/:id', (req, res) => {
+        const {id: roomId} = req.params
+        const obj = rooms.has(roomId)
+            ? {
+                users: [...rooms.get(roomId).get('users').values()],
+                messages: [...rooms.get(roomId).get('messages').values()]
+            }
+            : {users: [], messages: []};
+        res.json(obj);
+    }
 )
 
 app.post('/rooms', (req, res) => {
@@ -42,7 +40,7 @@ app.post('/rooms', (req, res) => {
 
 io.on('connection', (socket) => {
     socket.on('ROOM_JOIN', (req) => {
-        const {roomId, userName,userId} = req
+        const {roomId, userName, userId} = req
         socket.join(roomId)
         rooms.get(roomId).get('users').set(socket.id, {
             userName,
@@ -50,16 +48,11 @@ io.on('connection', (socket) => {
         })
         const users = [...rooms.get(roomId).get('users').values()];
         socket.to(roomId).broadcast.emit('ROOM_SET_USERS', users);
+        socket.to(roomId).emit('ROOM_SET_NEW_USER', req)
     })
 
     socket.on('ROOM_NEW_MESSAGE', (req) => {
-
-        console.log('rooms',rooms)
-        console.log('req',req)
         rooms.get(req.roomId).get('messages').push(req)
-
-
-
         socket.to(req.roomId).broadcast.emit('ROOM_NEW_MESSAGE', req);
     })
 
@@ -73,7 +66,6 @@ io.on('connection', (socket) => {
     })
 
 });
-
 
 
 server.listen(8888, (err) => {

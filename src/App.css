@@ -1,26 +1,64 @@
-.app_wrapper{
+.app_wrapper {
     display: grid;
-   grid-template-areas: " user header"
+    grid-template-areas: " user header"
                          "list chat";
-
     grid-template-columns: 300px 1fr;
     grid-gap: 10px;
     margin: 10px;
 }
 
-
-.app_user{
+.app_user {
     grid-area: user;
 }
-.app_header{
+
+.app_header {
     grid-area: header;
 }
 
-.app_list{
+.app_list {
     grid-area: list;
 }
 
-.app_chat{
+.app_chat {
     grid-area: chat;
 }
 
+.wrapper_app {
+    position: relative;
+    transition: 400ms;
+}
+
+.notification {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #6588de;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-animation: slideIn 5s forwards;
+    animation: slideIn 5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
