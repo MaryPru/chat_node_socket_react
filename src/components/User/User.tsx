@@ -7,6 +7,7 @@ interface UserInterface {
     state: RoomReducer
 }
 
+// компонент пользователя
 const User = (props: UserInterface) => {
     const {userName} = props.state
 

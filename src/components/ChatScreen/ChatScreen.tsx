@@ -20,6 +20,7 @@ export interface FilesInterface {
     name: string
 }
 
+// компонент отображения чата
 const ChatScreen = (props: ChatScreenInterface) => {
     const [messageValue, setMessageValue] = useState('')
     const {messages, users, userName, roomId, userId} = props.state
@@ -28,6 +29,7 @@ const ChatScreen = (props: ChatScreenInterface) => {
     const [statusEmoji, setStatusEmoji] = useState<boolean>(false);
     const [files, setFiles] = useState<FilesInterface[]>([])
 
+    // функция для отправления смайликов
     const onEmojiClick = (event: any, emojiObject: any) => {
         setChosenEmoji(emojiObject);
         // @ts-ignore
@@ -37,14 +39,15 @@ const ChatScreen = (props: ChatScreenInterface) => {
             setMessageValue((prevState => messageValue + prevState))
         }
     };
-
+// функция для того, чтобы новый сообщения всегда скролились вниз
     const scrollToBottom = () => {
         //@ts-ignore
         messagesEndRef.current.scrollIntoView({behavior: "smooth"});
     };
-
+// подписываемся на массив сообщений для обновления компоненты
     useEffect(scrollToBottom, [messages]);
 
+    // функция для отправки сообщений
     const onSendMessage = () => {
         let value = messageValue
         if (files.length) {
@@ -64,12 +67,14 @@ const ChatScreen = (props: ChatScreenInterface) => {
         }
     }
 
+    // функция для отправки сообщения по кнопке Enter
     const onEnter = (event: any) => {
         if (event.which === 13 || event.keyCode === 13 || event.key === "Enter") {
             onSendMessage();
         }
     }
 
+    // удаление прикрепленного файла
     const handleDeleteFile = (id: string) => {
         const withoutFile = files.filter((item) => item.id !== id)
         setFiles([...withoutFile])

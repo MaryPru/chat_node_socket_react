@@ -7,10 +7,12 @@ interface ListUserInterface {
     messages: OneMessage[] | undefined
 }
 
+// компонент левой части чата, список пользователей в чате
 const ListUser = (props: ListUserInterface) => {
     const {userName, userId} = props.user
     const {messages = []} = props
 
+    // поиск последнего отправленного сообщения для отображения
     const lastMessage = messages.filter((message) => message.userId === userId)
 
     return (

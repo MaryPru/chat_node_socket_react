@@ -2,6 +2,7 @@ import React from 'react';
 import {images} from "../../assets/images";
 import "./Header.css"
 
+// компонент заголовка чата
 const Header = () => {
     return (
         <div className={'header'}>

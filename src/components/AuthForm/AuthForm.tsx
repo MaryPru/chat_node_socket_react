@@ -13,6 +13,7 @@ const connectSocket = () => {
     io('http://localhost:8888')
 }
 
+// компонент авторизации нового пользователя
 const AuthForm = (props: AuthProps) => {
     const {onLogin} = props
     const [roomId, setRoomId] = useState('')

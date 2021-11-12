@@ -9,6 +9,7 @@ interface ChatInterface {
     state: RoomReducer
 }
 
+// компонент всего чата, состоит из 4-х компонент
 const Chat = (props: ChatInterface) => {
     const {state} = props
 

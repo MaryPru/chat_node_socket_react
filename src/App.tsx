@@ -27,6 +27,7 @@ function App() {
 
     const [joinedUser, setJoinedUser] = useState<JoinedUser>()
 
+        // функция для авторизации, отправляет нового пользователя на сервер
     const onLogin = async (obj: Room) => {
         const user = {
             ...obj,

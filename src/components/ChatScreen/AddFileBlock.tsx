@@ -8,6 +8,7 @@ interface AddFileBlockInterface {
     handleDeleteFile: (id: string) => void
 }
 
+// компонент прикрепленного файла
 const AddFileBlock = (props: AddFileBlockInterface) => {
     const {file, handleDeleteFile} = props
 
