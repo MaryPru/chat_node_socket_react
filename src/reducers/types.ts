@@ -12,6 +12,7 @@ export interface RoomReducer {
     userId: string
 }
 
+
 export interface Room {
     roomId: string
     userName: string
